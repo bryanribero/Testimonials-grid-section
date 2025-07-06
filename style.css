@@ -98,7 +98,7 @@ article:nth-child(4) .image{
   main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, minmax(280px, auto));
+    grid-template-rows: repeat(2, auto);
     align-content: center;
     width: 100%;    
     max-width: 1100px;
