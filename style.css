@@ -98,13 +98,12 @@ article:nth-child(4) .image{
   main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(2, 280px);
     grid-template-areas:
       "a a b e"
       "c d d e";
-    /* justify-content: center; */
     align-content: center;
-    width: 1050px;       
+    width: 1050px;    
     margin: 0 auto;
     padding: 0;
   }
@@ -112,11 +111,8 @@ article:nth-child(4) .image{
   article {
     grid-column: auto;
     grid-row: auto;
-    /* align-self: stretch;
-    justify-self: stretch; */
     width: 100%;
     height: 100%;
-    min-height: 100%;
     max-width: none;
     padding: 2rem;
   }
@@ -143,8 +139,8 @@ article:nth-child(4) .image{
   .media{
     display: block;
     position: absolute;
-    top: -2.05rem;
-    right: 1.8rem;
+    top: -2rem;
+    right: 2.5rem;
   }
 }
     
