@@ -95,13 +95,17 @@ article:nth-child(4) .image{
 }
 
 @media (min-width: 1000px) {
+    body{
+        width: 78vw;
+        margin: auto;
+    }
   main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, minmax(280px, auto));
     align-content: center;
     width: 100%;    
-    max-width: 1100px;
+    max-width: 100%;
     margin: 0 auto;
     
   }
@@ -142,14 +146,13 @@ article:nth-child(5) {
 }
 
   h3 {
-    max-width: auto;
     z-index: 1;
   }
   article:nth-child(3) h3{
     max-width: 12rem;
    }
   p {
-    line-height: 1.5rem;
+    line-height: 1.45rem;
   }
   .container-img-people{
     position: relative;
