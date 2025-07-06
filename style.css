@@ -99,9 +99,6 @@ article:nth-child(4) .image{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 280px);
-    grid-template-areas:
-      "a a b e"
-      "c d d e";
     align-content: center;
     width: 1050px;    
     margin: 0 auto;
@@ -117,11 +114,30 @@ article:nth-child(4) .image{
     padding: 2rem;
   }
 
-  article:nth-child(1) { grid-area: a; }
-  article:nth-child(2) { grid-area: b; }
-  article:nth-child(3) { grid-area: c; }
-  article:nth-child(4) { grid-area: d; }
-  article:nth-child(5) { grid-area: e; }
+  article:nth-child(1) {
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+article:nth-child(2) {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+article:nth-child(3) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+article:nth-child(4) {
+  grid-column: 2 / span 2;
+  grid-row: 2;
+}
+
+article:nth-child(5) {
+  grid-column: 4;
+  grid-row: 1 / span 2;
+}
 
   h3 {
     max-width: auto;
