@@ -8,10 +8,10 @@ html{
     font-size: 13px;
     background-color: hsl(0, 0%, 92%);
 }
+
 main{
     display: grid;
     min-height: 100vh;
-    width: 100vw;
     gap: 2rem;
     padding: 6rem 2rem;
     justify-content: center;
@@ -24,16 +24,19 @@ article{
     border-radius: 10px;
     height: 100%;
     max-width: 300px;
-    box-shadow: 0px 50px 65px 10px hsla(217, 30%, 14%, 0.151);
+    box-shadow: 20px 50px 60px rgba(0, 0, 0, 0.267);
 }
 .container-img-people{
     display: flex;
     align-items: center;
     gap: 1.2rem;
 }
-img{
+.image{
     border-radius: 50%;
     width:2.5rem;
+}
+.media{
+    display: none;
 }
 h2{
     font-size: clamp(.7rem, 4vw ,1.1rem);
@@ -58,7 +61,7 @@ article:nth-child(1) h3,
 article:nth-child(1) h2{
     color: hsl(214, 17%, 92%);
 }
-article:nth-child(1) img{
+article:nth-child(1) .image{
     border: 2px solid hsl(264, 82%, 80%);
 }
 article:nth-child(2){
@@ -86,11 +89,60 @@ article:nth-child(4){
     background-color: hsl(219, 29%, 14%);
     color: hsl(0, 0%, 81%);
 }
-article:nth-child(4) img{
+article:nth-child(4) .image{
     border: 2px solid hsl(263, 55%, 52%);
 }
 
-@media(min-width:1199px){
-   
+@media (min-width: 1199px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(4, 240px);
+    grid-template-rows: repeat(2, 280px);
+    grid-template-areas:
+      "a a b e"
+      "c d d e";
+    justify-content: center;
+    align-content: center;
+    gap: 2.5rem;
+    width: fit-content;       
+    margin: 0 auto;
+  }
+
+  article {
+    grid-column: auto;
+    grid-row: auto;
+    align-self: stretch;
+    justify-self: stretch;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    max-width: none;
+    padding: 2rem;
+  }
+
+  article:nth-child(1) { grid-area: a; }
+  article:nth-child(2) { grid-area: b; }
+  article:nth-child(3) { grid-area: c; }
+  article:nth-child(4) { grid-area: d; }
+  article:nth-child(5) { grid-area: e; }
+
+  h3 {
+    max-width: 38rem;
+    z-index: 1;
+  }
+
+  p {
+    line-height: 1.5rem;
+    overflow-wrap: break-word;
+  }
+  .container-img-people{
+    position: relative;
+  }
+  .media{
+    display: block;
+    position: absolute;
+    top: -2.05rem;
+    right: 1.8rem;
+  }
 }
     
